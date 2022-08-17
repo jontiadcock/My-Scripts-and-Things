@@ -1,3 +1,3 @@
 # My-Scripts
- 
-This library contains scripts that I have created
+
+This library is for all of the scripts I have personally created
