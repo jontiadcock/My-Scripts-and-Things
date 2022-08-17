@@ -2,7 +2,7 @@
 # Created by Jonti :)
 
 
-# $Type = "guests" #or "regularusers" # this variable isnt working yet
+# $Type = "guests" #or "regularusers" # this variable isnt setup yet
 
 
 # Start up warning
