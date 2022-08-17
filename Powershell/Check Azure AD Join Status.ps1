@@ -1,0 +1,1 @@
+dsregcmd /status | findstr "AzureAdJoined"
