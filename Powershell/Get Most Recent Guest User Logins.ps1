@@ -1,23 +1,16 @@
 ﻿# This script Takes a list of all Azure AD Guest Users and records most recent login (Interactive, or non interactive)
 # Created by Jonti :)
 
-
-
-
-
 ########## VARIABLES - CHANGE ME ##########
 
-$tenantAddr = "@baseresourcesltd.onmicrosoft.com" # This is the tenant default @***.onmicrosoft.com domain
-$tenantdomain = "@baseresources.com.au" # This is the tenant primary domain
+$tenantAddr = "@mytenant.onmicrosoft.com" # This is the tenant default @***.onmicrosoft.com domain
+$tenantdomain = "@mytetant.com.au" # This is the tenant primary domain
 $mstimeperuser = "500" # Increase number if getting error: Error occurred while executing GetAuditSignInLogs, 500 is normally pretty good but may need to be upped to 1000.
 # If you have many users to audit, then 500 normally will give best results in quickest time. If you only have <50 users, then setting to 1000 will be fine.
 
 # $Type = "guests" #or "regularusers" # this variable isnt working yet
 
 ########## VARIABLES - CHANGE ME ##########
-
-
-
 
 
 # Start up warning
