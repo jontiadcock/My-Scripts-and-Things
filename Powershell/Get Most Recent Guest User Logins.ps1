@@ -26,7 +26,7 @@ If you havent run as admin, press 'Ctrl + c' a few times to cancel, and re-launc
 Please click 'Yes to all' to continue, otherwise script will not work"
 Start-Sleep -Milliseconds 15000
 
-# Uninstall Azure Module and install AzurePreview Module
+# Uninstall Azure Module and install AzureAD Preview Module
 Write-Output "Uninstalling standard modules and changing to preview modules"
 Uninstall-Module -Name AzureAD
 Install-Module -Name AzureADPreview
@@ -49,7 +49,7 @@ Start-Sleep -Milliseconds $mstimeperuser
       Write-Output "$singleuser`tNo login for over 1month" | Out-File C:\temp\AzureGuestUsers.csv -Append
       Start-Sleep -Milliseconds $mstimeperuser
       }
-  else {
+    else {
       Write-Output "$tempvalue" |
       ForEach-Object {$_ -Replace '@{CreatedDateTime=', 'Most recent login: '} |
       ForEach-Object {$_ -Replace '; ',', '} |
@@ -62,7 +62,7 @@ Start-Sleep -Milliseconds $mstimeperuser
 Start-Sleep -Milliseconds $mstimeperuser
 }
 
-# Disconnect AZAD
+# Disconnect AzureAD
 Write-Output "Disconnecting AzureAD"
 Disconnect-AzureAD
 
@@ -71,6 +71,6 @@ Write-Output "Reinstalling standard modules"
 Uninstall-Module -Name AzureADPreview
 Install-Module -Name AzureAD
 
+# End script
 Start-Sleep -Milliseconds 5000
-
 Write-Output "Script Complete, file located in C:\temp\AzureGuestUsers"
