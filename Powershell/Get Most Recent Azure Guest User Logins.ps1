@@ -5,6 +5,10 @@
 # This script Takes a list of all Azure AD Guest Users and records most recent login (Interactive and non-interactive)
 # Created by Jonti :)
 #
+# In order to work, this script uninstalls azure AD module and installs the preview module, then re-installs the azure AD module upon completion of script
+# The standard module does not have the recent login functionality so the preview module is required.
+#
+#
 #
 #
 # $Type = "guests" #or "regularusers" # this variable isnt setup yet
