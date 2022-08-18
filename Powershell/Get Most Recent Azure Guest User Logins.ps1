@@ -25,7 +25,7 @@ if ($Admin -eq "Y") {
     $tenantdomain = read-host -p 'Enter the primary domain of the tenant, example: @mydomain.com.au (include @)'
     $pathforcsv = read-host -p "Enter the path to the csv file you want to save the results to, example: 'C:\Users\john.doe\results.csv'"
     $mstimeperuser = "1000" # Increase number if getting error: Error occurred while executing GetAuditSignInLogs, 650 is normally pretty good but may need to be upped to 1000 if getting errors.
-    # If you have many users to audit, then 1000 normally will give best results in quickest time. If you only have <50 users, then setting to 1000 will be fine.
+    # If you have many users to audit, then 500 normally will give best results in quickest time. If you only have <50 users, then setting to 1000 will be fine.
 
     # Uninstall Azure Module and install AzureAD Preview Module
     Write-Output "Please click 'Yes to all' to continue, otherwise script will not work"
