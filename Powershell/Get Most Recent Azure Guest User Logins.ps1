@@ -1,8 +1,14 @@
-﻿# This script Takes a list of all Azure AD Guest Users and records most recent login (Interactive, or non interactive)
+﻿#
+#
+#
+#
+# This script Takes a list of all Azure AD Guest Users and records most recent login (Interactive and non-interactive)
 # Created by Jonti :)
-
-
+#
+#
+#
 # $Type = "guests" #or "regularusers" # this variable isnt setup yet
+#
 
 
 # Start up warning
@@ -24,7 +30,7 @@ if ($Admin -eq "Y") {
     Uninstall-Module -Name AzureAD | out-null
     Install-Module -Name AzureADPreview | out-null
 
-    # Connect to AZAD
+    # Connect to Azure AD
     Write-Output "Connecting to AzureAD"
     Connect-AzureAD | Out-Null
     Start-Sleep -Milliseconds 5000
