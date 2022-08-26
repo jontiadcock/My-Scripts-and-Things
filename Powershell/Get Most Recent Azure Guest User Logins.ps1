@@ -35,8 +35,24 @@ if ($Admin -eq "Y") {
 
     # Connect to Azure AD
     Write-Output "Connecting to AzureAD"
-    Connect-AzureAD | Out-Null
+    Connect-AzureAD | Out-Null #Remove this when bottom command working.
+
+
+
+    
+################# Broken code #######################
+
+# Need to write line that contains "account" info to $connectazaddata, and select the address to use in place of manually typing $tennantdomain and $tennantaddress
+
+    # $connectazaddata = Connect-AzureAD | Format-List
     Start-Sleep -Milliseconds 5000
+
+# Write-Output $connectazaddata enable this when top command working.
+
+################# Broken code #######################
+
+
+
 
     # Generate List of guest users by email address and assign to $userlist variable
     $userlist = Get-AzureADUser -All $true | Select-Object -Unique "UserPrincipalName" | Select-String -pattern "#EXT#"
