@@ -1,5 +1,5 @@
 ﻿#
-#
+# delete-this-comment
 #
 #
 # This script Takes a list of all Azure AD Guest Users and records most recent login (Interactive and non-interactive)
